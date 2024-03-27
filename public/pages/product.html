@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../styles/styles.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <title>Urban Forge</title>
+  </head>
+  <body class="p-0 m-0 bg-neutral">
+    <!-- Navbar Container-->
+    <div id="navbar_container"></div>
+
+    <div class="row min-w-75 p-3 mx-auto">
+      <!-- Image Carousel -->
+      <div class="col-12 col-lg-6 p-2">
+        <div
+          id="productImagesCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <!-- Carousel Indicators -->
+          <div
+            id="product_carousel_indicators"
+            class="carousel-indicators"
+          ></div>
+          <!-- Carousel Images -->
+          <div
+            id="product_carousel_images"
+            class="carousel-inner rounded-3 shadow"
+          ></div>
+          <!-- Previous and Next Buttons -->
+        </div>
+      </div>
+      <!-- Product Details -->
+      <div class="col-12 col-lg-6 p-2">
+        <!-- Product Name -->
+        <h1
+          id="product_name"
+          class="text-lg text-primary-600 text-capitalize mb-3"
+        ></h1>
+        <!-- Product Quote -->
+        <div
+          id="product_quote"
+          class="d-flex justify-content-center text-italic align-items-center bg-white rounded-3 p-3 mb-4 shadow"
+        ></div>
+        <!-- Product Reference ID -->
+        <h3 class="text-md text-primary-600 mb-4">
+          Ref ID : <span id="product_id"></span>
+        </h3>
+        <!-- Product For -->
+        <h3 class="text-md text-primary-600 mb-4">
+          For : <span id="product_for"></span>
+        </h3>
+        <!-- Product Rating and Reviews -->
+        <h3 class="text-md text-primary-600 mb-4">
+          Rating : <span id="product_rating"></span>
+          <span id="product_reviews"></span>
+        </h3>
+        <!-- Product Price -->
+        <h3 class="text-md text-primary-600 mb-4">
+          Price : <span id="product_price"></span>
+        </h3>
+        <!-- Product Quantity -->
+        <div>
+          <h3 class="text-md text-primary-600">Quantity :</h3>
+          <div class="d-flex align-items-center">
+            <!-- Quantity Control -->
+            <button
+              id="product_quantity_decrease"
+              class="btn bg-outline-accent rounded-0 rounded-start"
+            >
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <input
+              id="product_quantity_display"
+              class="form-control-plaintext border-top border-bottom rounded-0 w-25 bg-white text-primary-600 text-center"
+              type="text"
+              aria-label="readonly input"
+              readonly
+            />
+            <button
+              id="product_quantity_increase"
+              class="btn bg-outline-accent rounded-0 rounded-end"
+            >
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Key Points about the product -->
+    <div class="row min-w-75 p-3 mx-auto">
+      <div class="col-12 p-2">
+        <div class="bg-white text-primary-600 rounded p-2">
+          <h3 class="text-md text-primary-600 mb-3">Key Points :</h3>
+          <ul id="key_points"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row min-w-75 p-3 mx-auto">
+      <div class="col-6 col-lg-4 p-2 m-0">
+        <h3
+          id="total_price"
+          class="d-flex h-100 justify-content-center align-items-center text-md text-italic text-primary-600"
+        ></h3>
+      </div>
+      <div class="col-6 col-lg-8 p-2 m-0">
+        <button
+          id="add_to_cart_btn"
+          class="btn btn bg-accent w-100 d-flex justify-content-center"
+        ></button>
+      </div>
+    </div>
+
+    <!-- Toast pop-up -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+      <div
+        id="liveToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <img
+            src="../images/crown_primary.svg"
+            width="18"
+            class="rounded me-2"
+            alt="..."
+          />
+          <strong class="me-auto">UrbanForge</strong>
+          <span id="time_now"></span>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div id="toast_message" class="toast-body"></div>
+      </div>
+    </div>
+
+    <!-- Footer Container -->
+    <footer id="footer" class="container-fluid"></footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/4555b692af.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Local JS -->
+    <script type="module" src="../../src/app.js"></script>
+    <script src="../../src/common/redirectFunctions.js"></script>
+    <script
+      type="module"
+      src="../../src/pageLogics/individualProductPage.js"
+    ></script>
+    <script type="module" src="../../src/common/carouselFunctions.js"></script>
+  </body>
+</html>

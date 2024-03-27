@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../styles/styles.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <title>Urban Forge</title>
+  </head>
+  <body class="p-0 m-0 bg-neutral">
+    <!-- Navbar -->
+    <div id="navbar_container"></div>
+
+    <!-- Write code for cart here -->
+    <div class="container-fluid min-vh-100 mt-2">
+      <div class="container-fluid mt-3 pb-3 text-center text-primary-600">
+        <img src="../images/crown_primary.svg" width="75" alt="logo" />
+        <h1 class="mb-3">Your Basket</h1>
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-12 col-md-8 col-lg-6 mx-auto">
+              <p>
+                Your style journey is almost complete! Seize the moment and make
+                it yours by adding these handcrafted treasures to your
+                collection. Elevate your look with our quality accessories at
+                unbeatable prices. Act now to transform your style effortlessly
+                – because every piece in your cart is a step toward a more
+                stylish you!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart Items and final price quote container -->
+      <div class="row min-w-75 mx-auto">
+        <!-- Cart Items Container -->
+        <div
+          id="cart_items_container"
+          class="col-12 col-md-12 col-lg-8 p-1 pt-3 pb-3"
+        >
+          <!-- Cart Items will come here -->
+        </div>
+
+        <!-- Final Cart Price Container -->
+        <div class="col-12 col-md-12 col-lg-4 p-1 pt-3 pb-3">
+          <div class="bg-white shadow rounded-3 p-4">
+            <h2 class="text-md text-capitalize text-primary-600">
+              Cart Total:
+            </h2>
+            <hr class="border-top-2 w-100 text-primary-200 mt-3 mb-3" />
+            <div class="d-flex justify-content-between">
+              <span class="text-primary-200 text-xs">Sub Total:</span>
+              <span
+                id="cart_items_subtotal"
+                class="text-primary-200 text-xs"
+              ></span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span class="text-primary-200 text-xs">Taxes (at 12%):</span>
+              <span id="cart_taxes" class="text-primary-200 text-xs"></span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span class="text-primary-200 text-xs">Delivery:</span>
+              <span class="text-primary-200 text-xs">INR 50.00</span>
+            </div>
+            <hr class="border-top-2 w-100 text-primary-200 mt-3 mb-3" />
+            <div class="d-flex justify-content-between">
+              <span class="text-md text-primary-600">Total:</span>
+              <span
+                id="cart_final_total"
+                class="text-md text-italic text-primary-600"
+              ></span>
+            </div>
+            <hr class="border-top-2 w-100 text-primary-200 mt-3 mb-3" />
+            <button class="btn bg-accent btn-lg">Checkout</button>
+          </div>
+        </div>
+      </div>
+      <div class="min-w-75 mx-auto p-3">
+        <div class="bg-white shadow rounded-3 p-3">
+          <h3 class="text-primary-600 text-md">Delivery Information:</h3>
+          <p class="text-primary-600 text-sm">
+            Standard delivery is:
+            <span class="text-primary-600"><strong>4-5 days</strong></span
+            >.
+          </p>
+
+          <h3 class="text-primary-600 text-md">Need it Faster?</h3>
+          <p class="text-primary-600 text-sm">
+            You can select the <strong>Next Day Delivery</strong> option at
+            checkout to avail the
+            <strong>Next Working Day Delivery (Order before 10pm)</strong>.
+          </p>
+          <p class="text-primary-600 text-sm">
+            Next day delivery is only available in select major cities.
+            <strong
+              >Delivery is Monday to Friday, excluding public holidays</strong
+            >.
+          </p>
+          <p class="text-primary-600 text-sm">
+            Items once sold CANNOT be returned or replaced.
+          </p>
+          <p class="text-primary-600 text-sm">
+            All items will arrive in unmarked packaging to prevent theft.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid mt-5" id="footer"></footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/4555b692af.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Local JS -->
+    <script type="module" src="../../src/app.js"></script>
+    <script src="../../src/common/redirectFunctions.js"></script>
+    <script type="module" src="../../src/common/cartFunctions.js"></script>
+    <script type="module" src="../../src/pageLogics/cart.js"></script>
+  </body>
+</html>
